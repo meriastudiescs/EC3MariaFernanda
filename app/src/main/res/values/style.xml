@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Definición del estilo personalizado para la barra de navegación inferior -->
+    <style name="AppBottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="itemIconTint">@color/my_bottom_navigation_icon_color</item>
+    <item name="itemTextColor">@color/my_bottom_navigation_text_color</item>
+</style>
+
+    <style name="Button.DarAmor" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FFEFF8</item>
+    </style>
+</resources>
+
