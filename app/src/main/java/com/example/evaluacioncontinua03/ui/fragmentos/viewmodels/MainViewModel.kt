@@ -1,18 +1,16 @@
-package com.example.evaluacioncontinua03.ui.fragments.viewmodels
+package com.example.evaluacioncontinua03.ui.fragmentos.viewmodels
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.evaluacioncontinua03.data.PersonajeServiceResult
 import com.example.evaluacioncontinua03.data.repository.PersonajeRepository
 import com.example.evaluacioncontinua03.data.retrofit.RetrofitHelper
 import com.example.evaluacioncontinua03.model.Personaje
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
 
 class MainViewModel: ViewModel() {
 

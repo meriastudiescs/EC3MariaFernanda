@@ -1,38 +1,35 @@
-package com.dylan.anotafacil.ui.fragments
+package com.example.evaluacioncontinua03.ui.fragmentos.fragments
 
-import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.dylan.anotafacil.databinding.ItemNoteBinding
-import com.dylan.anotafacil.model.Note
+import com.bumptech.glide.Glide
+import com.example.evaluacioncontinua03.databinding.ItemRvPersonajeBinding
+import com.example.evaluacioncontinua03.model.Personaje
 
-/*private val notes*/
-class RVNoteListAdapter(var notes : List<Note>, val onNoteClick : (Note) -> Unit) : RecyclerView.Adapter<NoteVH>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteVH {
-        val binding = ItemNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return NoteVH(binding, onNoteClick)
+class RVPersonajeListAdapter(var personajes : List<Personaje>, val onPersonajeClick : (Personaje) -> Unit) : RecyclerView.Adapter<PersonajeVH>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonajeVH {
+        val binding = ItemRvPersonajeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PersonajeVH(binding, onPersonajeClick)
     }
 
-    override fun getItemCount(): Int = notes.size
+    override fun getItemCount(): Int = personajes.size
 
-    override fun onBindViewHolder(holder: NoteVH, position: Int) {
-        holder.bind(notes[position])
+    override fun onBindViewHolder(holder: PersonajeVH, position: Int) {
+        holder.bind(personajes[position])
     }
 }
 
-class NoteVH(private val binding : ItemNoteBinding, val onNoteClick : (Note) -> Unit) : ViewHolder(binding.root) {
-    fun bind(note: Note) {
-        binding.txtNoteTitle.text = note.title
-        binding.txtContentNote.text = note.content
-        val labelString = note.labels.joinToString( " | " )
-        binding.txtLablesNote.text = labelString
-        binding.txtCreatedonNote.text = note.createdOn
-        binding.cvItemNote.setCardBackgroundColor(ColorStateList.valueOf(note.getColor()))
+class PersonajeVH(private val binding : ItemRvPersonajeBinding, val onPersonajeClick : (Personaje) -> Unit) : ViewHolder(binding.root) {
+    fun bind(personaje: Personaje) {
+        Glide.with(binding.root)
+            .load(personaje.imagen) // URL de la imagen
+            .into(binding.ivPersonaje)
+        binding.tvNomPersonaje.text = personaje.personaje
         binding.root.setOnClickListener {
             //Pasar a la siguiente pantalla
-            onNoteClick(note)
+            onPersonajeClick(personaje)
         }
     }
 }

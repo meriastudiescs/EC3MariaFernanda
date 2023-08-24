@@ -1,24 +1,27 @@
-package com.dylan.anotafacil.model
+package com.example.evaluacioncontinua03.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "nota")
-data class NoteEntity(
+@Entity(tableName = "personaje")
+data class PersonajeEntity(
     @PrimaryKey
+    @SerializedName("id")
     val id: Int,
-    val title: String,
-    val content: String,
-    val labels: String,
-    val color: String,
-    @SerializedName("created_on")
-    val createdOn: String,
+    @SerializedName("quote")
+    val frase: String,
+    @SerializedName("by")
+    val personaje: String,
+    @SerializedName("character")
+    val por: String,
+    @SerializedName("image")
+    val imagen: String,
     var isFavorite: Boolean = false
 )
 
-fun NoteEntity.toNote() : Note {
-    return Note(
-        id, title, content, labels.split("|"), color, createdOn, isFavorite
+fun PersonajeEntity.toPersonaje() : Personaje {
+    return Personaje(
+        id, frase, personaje, por, imagen, isFavorite
     )
 }

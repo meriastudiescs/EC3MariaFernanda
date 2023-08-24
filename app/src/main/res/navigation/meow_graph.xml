@@ -3,21 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/note_graph"
-    app:startDestination="@id/meowListFragment">
+    app:startDestination="@id/personajeListFragment">
 
     <fragment
-        android:id="@+id/meowListFragment"
-        android:name="com.example.evaluacioncontinua03.ui.fragments.ListaFragment"
+        android:id="@+id/personajeListFragment"
+        android:name="com.example.evaluacioncontinua03.ui.fragmentos.fragments.ListaFragment"
         android:label="fragment_note_list"
-        tools:layout="@layout/fragment_lista" />
+        tools:layout="@layout/fragment_lista">
+        <action
+            android:id="@+id/action_personajeListFragment_to_personajeDetailFragment"
+            app:destination="@id/personajeDetailFragment" />
+    </fragment>
+
     <fragment
-        android:id="@+id/meowFavoriteFragment"
-        android:name="com.example.evaluacioncontinua03.ui.fragments.FavoritoFragment"
+        android:id="@+id/personajeFavoriteFragment"
+        android:name="com.example.evaluacioncontinua03.ui.fragmentos.fragments.FavoritoFragment"
         android:label="fragment_note_favorite"
-        tools:layout="@layout/fragment_favorito" />
+        tools:layout="@layout/fragment_favorito" >
+    <action
+        android:id="@+id/action_PersonajeFavoriteFragment_to_personajeDetailFragment"
+        app:destination="@id/personajeDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.evaluacioncontinua03.ui.fragments.InfoFragment"
+        android:name="com.example.evaluacioncontinua03.ui.fragmentos.fragments.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/personajeDetailFragment"
+        android:name="com.example.evaluacioncontinua03.ui.fragmentos.fragments.PersonajeDetailFragment"
+        android:label="fragment_note_detail"
+        tools:layout="@layout/fragment_personaje_detail" >
+        <argument
+            android:name="personaje"
+            app:argType="com.example.evaluacioncontinua03.model.Personaje" />
+    </fragment>
 </navigation>

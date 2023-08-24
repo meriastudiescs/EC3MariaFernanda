@@ -1,38 +1,54 @@
 [
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\fragment_lista.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\fragment_lista.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\fragment_lista.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\fragment_lista.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\activity_login.xml"
+        "merged": "com.example.evaluacioncontinua03.app-mergeDebugResources-60:/layout/activity_main.xml",
+        "source": "com.example.evaluacioncontinua03.app-main-63:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\bottom_sheet_dialog_frase.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\bottom_sheet_dialog_frase.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\fragment_favorito.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\fragment_favorito.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\item_rv_personaje.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\item_rv_personaje.xml"
     },
     {
-        "merged": "com.example.evaluacioncontinua03.app-mergeDebugResources-50:/layout/fragment_favorito.xml",
-        "source": "com.example.evaluacioncontinua03.app-main-53:/layout/fragment_favorito.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\activity_add_personaje.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\activity_add_personaje.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\activity_splash.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\fragment_inicio.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\fragment_inicio.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\fragment_favorito.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\fragment_favorito.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\fragment_info.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\fragment_info.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-50:\\layout\\item_fact.xml",
-        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-53:\\layout\\item_fact.xml"
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\fragment_inicio.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\fragment_inicio.xml"
+    },
+    {
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\fragment_personaje_detail.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\fragment_personaje_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\item_fact.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\item_fact.xml"
+    },
+    {
+        "merged": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-mergeDebugResources-60:\\layout\\fragment_info.xml",
+        "source": "C:\\Users\\maria\\.gradle\\daemon\\7.5\\com.example.evaluacioncontinua03.app-main-63:\\layout\\fragment_info.xml"
     }
 ]

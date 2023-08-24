@@ -3,20 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/mainback">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Contenedor para mostrar los fragmentos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordes_redondeados"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPersonajes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_rv_personaje"/>
+
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation" />
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="300dp"
+        app:srcCompat="@drawable/ic_paw"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <!-- Agrega el BottomNavigationView al final de tu layout -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#1A212F"
         android:layout_alignParentBottom="true"
         style="@style/AppBottomNavigationStyle"
         app:menu="@menu/bottom_navigation_menu" />

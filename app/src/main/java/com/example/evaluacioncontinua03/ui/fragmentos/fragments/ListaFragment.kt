@@ -1,4 +1,4 @@
-package com.example.evaluacioncontinua03.ui.fragments
+package com.example.evaluacioncontinua03.ui.fragmentos.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.evaluacioncontinua03.databinding.FragmentListaBinding
-import com.example.evaluacioncontinua03.ui.fragments.viewmodels.MainViewModel
-
+import com.example.evaluacioncontinua03.ui.fragmentos.NuevoPersonajeAdapter
+import com.example.evaluacioncontinua03.ui.fragmentos.viewmodels.NuevoPersonajeViewModel
 
 class ListaFragment : Fragment() {
-    private lateinit var binding : FragmentListaBinding
-    private lateinit var viewModel : MainViewModel
-    private lateinit var adapter : PersonajeAdapter
+    private lateinit var binding: FragmentListaBinding
+    private lateinit var viewModel: NuevoPersonajeViewModel
+    private lateinit var adapter: NuevoPersonajeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,27 +26,20 @@ class ListaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel = ViewModelProvider(this).get(NuevoPersonajeViewModel::class.java)
 
         setupRecyclerView()
 
-        viewModel.listaPersonajes.observe(viewLifecycleOwner) { list ->
-            adapter.listaPersonajes = list
-            adapter.notifyDataSetChanged()
-        }
-
-        binding.tilBuscar.setEndIconOnClickListener {
-            if (binding.tietBuscar.text.toString().isEmpty()) {
-                viewModel.obtenerPersonajes()
-            } else {
-                viewModel.obtenerPersonaje(binding.tietBuscar.text.toString().trim())
-            }
+        viewModel.listaNuevos.observe(viewLifecycleOwner) { list ->
+            adapter.listaPersonajes = list // Asigna la lista al adaptador
+            adapter.notifyDataSetChanged() // Notifica al adaptador sobre el cambio en los datos
         }
     }
 
-    fun setupRecyclerView() {
-        binding.rvPersonajes.layoutManager = GridLayoutManager(context, 3)
-        adapter = PersonajeAdapter(requireContext(), arrayListOf())
+    private fun setupRecyclerView() {
+        adapter = NuevoPersonajeAdapter(requireContext(), emptyList()) // Inicializar el adaptador con una lista vacía
+        binding.rvPersonajes.layoutManager = GridLayoutManager(requireContext(), 3)
         binding.rvPersonajes.adapter = adapter
     }
+
 }

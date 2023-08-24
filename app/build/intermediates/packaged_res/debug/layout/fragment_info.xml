@@ -3,19 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/infoback"
-    tools:context=".ui.fragments.InfoFragment">
+    android:background="@drawable/cerrarsesion"
+    tools:context=".ui.fragmentos.fragments.InfoFragment">
 
     <Button
         android:id="@+id/btnDarAmor"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="125dp"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="16dp"
-        style="@style/Button.DarAmor"
-        android:text="Dar Amor"
-        android:textColor="#DF3E9D"
+        android:text="Cerrar Sesión"
+        android:textColor="#4165AD"
         android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="18sp" />

@@ -1,3 +1,0 @@
-com.example.evaluacioncontinua03.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

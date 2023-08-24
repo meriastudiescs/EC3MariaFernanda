@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
@@ -24,13 +23,13 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
+  public final Button btnGoogle;
+
+  @NonNull
   public final Button btnLogin;
 
   @NonNull
-  public final Button btnRecuperarPass;
-
-  @NonNull
-  public final CheckBox chkPromociones;
+  public final Button btnSignUp;
 
   @NonNull
   public final RelativeLayout container;
@@ -53,16 +52,15 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextInputLayout tilCorreo;
 
-  private ActivityLoginBinding(@NonNull RelativeLayout rootView, @NonNull Button btnLogin,
-      @NonNull Button btnRecuperarPass, @NonNull CheckBox chkPromociones,
-      @NonNull RelativeLayout container, @NonNull LinearLayout linearParte3,
-      @NonNull LinearLayout linearParte4, @NonNull TextInputEditText tietClave,
-      @NonNull TextInputEditText tietCorreo, @NonNull TextInputLayout tilClave,
-      @NonNull TextInputLayout tilCorreo) {
+  private ActivityLoginBinding(@NonNull RelativeLayout rootView, @NonNull Button btnGoogle,
+      @NonNull Button btnLogin, @NonNull Button btnSignUp, @NonNull RelativeLayout container,
+      @NonNull LinearLayout linearParte3, @NonNull LinearLayout linearParte4,
+      @NonNull TextInputEditText tietClave, @NonNull TextInputEditText tietCorreo,
+      @NonNull TextInputLayout tilClave, @NonNull TextInputLayout tilCorreo) {
     this.rootView = rootView;
+    this.btnGoogle = btnGoogle;
     this.btnLogin = btnLogin;
-    this.btnRecuperarPass = btnRecuperarPass;
-    this.chkPromociones = chkPromociones;
+    this.btnSignUp = btnSignUp;
     this.container = container;
     this.linearParte3 = linearParte3;
     this.linearParte4 = linearParte4;
@@ -99,21 +97,21 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_google;
+      Button btnGoogle = ViewBindings.findChildViewById(rootView, id);
+      if (btnGoogle == null) {
+        break missingId;
+      }
+
       id = R.id.btnLogin;
       Button btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
         break missingId;
       }
 
-      id = R.id.btnRecuperarPass;
-      Button btnRecuperarPass = ViewBindings.findChildViewById(rootView, id);
-      if (btnRecuperarPass == null) {
-        break missingId;
-      }
-
-      id = R.id.chkPromociones;
-      CheckBox chkPromociones = ViewBindings.findChildViewById(rootView, id);
-      if (chkPromociones == null) {
+      id = R.id.btn_sign_up;
+      Button btnSignUp = ViewBindings.findChildViewById(rootView, id);
+      if (btnSignUp == null) {
         break missingId;
       }
 
@@ -155,9 +153,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((RelativeLayout) rootView, btnLogin, btnRecuperarPass,
-          chkPromociones, container, linearParte3, linearParte4, tietClave, tietCorreo, tilClave,
-          tilCorreo);
+      return new ActivityLoginBinding((RelativeLayout) rootView, btnGoogle, btnLogin, btnSignUp,
+          container, linearParte3, linearParte4, tietClave, tietCorreo, tilClave, tilCorreo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

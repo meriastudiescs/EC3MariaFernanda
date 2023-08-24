@@ -1,38 +1,35 @@
-package com.dylan.anotafacil.ui.viewmodels
+package com.example.evaluacioncontinua03.ui.fragmentos.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dylan.anotafacil.data.NoteServiceResult
-import com.dylan.anotafacil.data.repository.NoteRepository
-import com.dylan.anotafacil.model.Note
+import com.example.evaluacioncontinua03.data.PersonajeServiceResult
+import com.example.evaluacioncontinua03.data.repository.PersonajeRepository
+import com.example.evaluacioncontinua03.model.Personaje
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NoteListViewModel: ViewModel() {
-    private val _notes : MutableLiveData<List<Note>> = MutableLiveData<List<Note>>()
-    val notes: LiveData<List<Note>> = _notes
+class PersonajeListViewModel: ViewModel() {
+        private val _personajes : MutableLiveData<List<Personaje>> = MutableLiveData<List<Personaje>>()
+    val personajes: LiveData<List<Personaje>> = _personajes
 
-    private val repository = NoteRepository()
+    private val repository = PersonajeRepository()
 
-    /*fun getAllNotes() {
-        val noteList = getData()
-        _notes.value = noteList
-    }*/
 
-    fun getNotesFromService() {
+    fun getPersonajesFromService() {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = repository.getNotes()
+            val response = repository.obtenerPersonaje()
             when (response) {
-                is NoteServiceResult.Success -> {
-                    _notes.postValue(response.data.notes)
+                is PersonajeServiceResult.Success -> {
+                    _personajes.postValue(response.data)
                 }
-                is NoteServiceResult.Error -> {
-                    //Pasar un error a otro lado
+                is PersonajeServiceResult.Error -> {
+                    // Manejar el error de alguna manera
                 }
             }
         }
     }
+
 
 }

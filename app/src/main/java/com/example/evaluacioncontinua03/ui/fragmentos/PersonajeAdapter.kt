@@ -1,8 +1,6 @@
-package com.example.evaluacioncontinua03.ui.fragments
+package com.example.evaluacioncontinua03.ui.fragmentos
 
 import android.content.Context
-import android.content.res.ColorStateList
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.evaluacioncontinua03.R
-import com.example.evaluacioncontinua03.databinding.ItemFactBinding
 import com.example.evaluacioncontinua03.model.Personaje
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -45,20 +41,33 @@ class PersonajeAdapter(
         holder.tvPersonaje.text = personaje.personaje
 
         holder.cvPersonaje.setOnClickListener {
-            mostrarFrase(personaje.frase)
+            mostrarFrase(personaje.imagen, personaje.personaje, personaje.frase, position )
         }
     }
 
     override fun getItemCount(): Int = listaPersonajes.size
 
-    fun mostrarFrase(frase: String) {
+    fun mostrarFrase(personaje: String, imagen: String, frase: String, position: Int) {
+
+        val personaje = listaPersonajes[position]
+
         val bottomSheetDialog = BottomSheetDialog(context)
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_dialog_frase)
 
+        val ivPersonaje = bottomSheetDialog.findViewById<ImageView>(R.id.ivPersonaje)
+        val tvNomPersonaje = bottomSheetDialog.findViewById<TextView>(R.id.tvNomPersonaje)
         val tvFrase = bottomSheetDialog.findViewById<TextView>(R.id.tvFrase)
 
+        // Cargar la imagen utilizando Glide o algún otro método similar
+        Glide.with(context)
+            .load(personaje.imagen)
+            .into(ivPersonaje!!)
+
+        tvNomPersonaje!!.text = personaje.personaje
         tvFrase!!.text = frase
 
         bottomSheetDialog.show()
     }
+
+
 }

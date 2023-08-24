@@ -1,24 +1,24 @@
-package com.dylan.anotafacil.ui.viewmodels
+package com.example.evaluacioncontinua03.ui.fragmentos.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.dylan.anotafacil.data.db.NotaDatabase
-import com.dylan.anotafacil.data.repository.NoteRepository
-import com.dylan.anotafacil.model.Note
+import com.example.evaluacioncontinua03.data.db.PersonajeDatabase
+import com.example.evaluacioncontinua03.data.repository.PersonajeRepository
+import com.example.evaluacioncontinua03.model.Personaje
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NoteDetailViewModel(application : Application) : AndroidViewModel(application) {
-    private val repository : NoteRepository
+class PersonajeDetailViewModel(application : Application) : AndroidViewModel(application) {
+    private val repository : PersonajeRepository
     init {
-        val db = NotaDatabase.getDatabase(application)
-        repository = NoteRepository(db)
+        val db = PersonajeDatabase.getDatabase(application)
+        repository = PersonajeRepository(db)
     }
 
-    fun addFavorites(note : Note) {
+    fun addFavorites(personaje : Personaje) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addNoteToFavorites(note)
+            repository.addPersonajeToFavorites(personaje)
         }
     }
 

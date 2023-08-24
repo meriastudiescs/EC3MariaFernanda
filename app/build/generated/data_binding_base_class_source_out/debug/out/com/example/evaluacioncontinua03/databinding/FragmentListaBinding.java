@@ -20,11 +20,11 @@ public final class FragmentListaBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final RecyclerView rvFactList;
+  public final RecyclerView rvPersonajes;
 
-  private FragmentListaBinding(@NonNull FrameLayout rootView, @NonNull RecyclerView rvFactList) {
+  private FragmentListaBinding(@NonNull FrameLayout rootView, @NonNull RecyclerView rvPersonajes) {
     this.rootView = rootView;
-    this.rvFactList = rvFactList;
+    this.rvPersonajes = rvPersonajes;
   }
 
   @Override
@@ -54,13 +54,13 @@ public final class FragmentListaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.rv_fact_list;
-      RecyclerView rvFactList = ViewBindings.findChildViewById(rootView, id);
-      if (rvFactList == null) {
+      id = R.id.rvPersonajes;
+      RecyclerView rvPersonajes = ViewBindings.findChildViewById(rootView, id);
+      if (rvPersonajes == null) {
         break missingId;
       }
 
-      return new FragmentListaBinding((FrameLayout) rootView, rvFactList);
+      return new FragmentListaBinding((FrameLayout) rootView, rvPersonajes);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

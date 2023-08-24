@@ -8,10 +8,12 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.evaluacioncontinua03.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,13 +26,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
+  public final FloatingActionButton fabAddNote;
+
+  @NonNull
   public final FrameLayout fragmentContainer;
 
+  @NonNull
+  public final RecyclerView rvPersonajes;
+
   private ActivityMainBinding(@NonNull RelativeLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout fragmentContainer) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull FloatingActionButton fabAddNote,
+      @NonNull FrameLayout fragmentContainer, @NonNull RecyclerView rvPersonajes) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
+    this.fabAddNote = fabAddNote;
     this.fragmentContainer = fragmentContainer;
+    this.rvPersonajes = rvPersonajes;
   }
 
   @Override
@@ -66,14 +77,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fab_add_note;
+      FloatingActionButton fabAddNote = ViewBindings.findChildViewById(rootView, id);
+      if (fabAddNote == null) {
+        break missingId;
+      }
+
       id = R.id.fragment_container;
       FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
       if (fragmentContainer == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((RelativeLayout) rootView, bottomNavigation,
-          fragmentContainer);
+      id = R.id.rvPersonajes;
+      RecyclerView rvPersonajes = ViewBindings.findChildViewById(rootView, id);
+      if (rvPersonajes == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((RelativeLayout) rootView, bottomNavigation, fabAddNote,
+          fragmentContainer, rvPersonajes);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

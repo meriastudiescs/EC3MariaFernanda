@@ -10,21 +10,29 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
-    <string name="app_name">EvaluacionContinua03</string>
+    <string name="app_name">Final Space</string>
+    <string name="default_web_client_id" translatable="false">837451943564-2r1bndpbhg9v9a9jasnb3hka4q1lhivi.apps.googleusercontent.com</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">837451943564</string>
+    <string name="google_api_key" translatable="false">AIzaSyBzPomtOoYKoKw-uQ8nzPCshRZKPvEeQBE</string>
+    <string name="google_app_id" translatable="false">1:837451943564:android:44c0eb49b59e67f0a1b5a9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBzPomtOoYKoKw-uQ8nzPCshRZKPvEeQBE</string>
+    <string name="google_storage_bucket" translatable="false">final-space-a422a.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">final-space-a422a</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="title_activity_splash">MeowVille</string>
+    <string name="title_activity_splash">Final Space</string>
+    <string name="web_client_id">107710120045420462953</string>
     <style name="AppBottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
-        <item name="itemIconTint">@color/my_bottom_navigation_icon_color</item>
-    <item name="itemTextColor">@color/my_bottom_navigation_text_color</item>
+        <item name="itemIconTint">@color/white</item>
+    <item name="itemTextColor">@color/white</item>
 </style>
     <style name="Button.DarAmor" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint">#FFEFF8</item>
+        <item name="android:backgroundTint">#FFFF</item>
     </style>
     <style name="Theme.EvaluacionContinua03" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
